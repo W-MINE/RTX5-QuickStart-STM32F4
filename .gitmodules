@@ -1,0 +1,18 @@
+[submodule "Drivers/CMSIS_6"]
+	path = Drivers/CMSIS_6
+	url = https://github.com/ARM-software/CMSIS_6.git
+[submodule "Drivers/CMSIS-DSP"]
+	path = Drivers/CMSIS-DSP
+	url = https://github.com/ARM-software/CMSIS-DSP.git
+[submodule "Drivers/CMSIS-RTX"]
+	path = Drivers/CMSIS-RTX
+	url = https://github.com/ARM-software/CMSIS-RTX.git
+[submodule "Drivers/CMSIS-View"]
+	path = Drivers/CMSIS-View
+	url = https://github.com/ARM-software/CMSIS-View.git
+[submodule "Drivers/CMSIS-Device/ST/STM32F4xx"]
+	path = Drivers/CMSIS-Device/ST/STM32F4xx
+	url = https://github.com/STMicroelectronics/cmsis_device_f4.git
+[submodule "Drivers/STM32F4xx_HAL_Driver"]
+	path = Drivers/STM32F4xx_HAL_Driver
+	url = https://github.com/STMicroelectronics/stm32f4xx_hal_driver.git

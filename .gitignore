@@ -1,0 +1,9 @@
+DebugConfig
+Listings
+Objects
+*.uvguix.*
+*.uvgui.*
+JLinkLog.txt
+JLinkSettings.ini
+build
+EventRecorderStub.scvd
