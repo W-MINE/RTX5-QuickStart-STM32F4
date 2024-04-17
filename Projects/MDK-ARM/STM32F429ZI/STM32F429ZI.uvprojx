@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx,Enable_EventRecorder,OS_EVR_INIT=1</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\App;..\..\Core\Inc;..\..\..\Drivers\BSP;..\..\..\Drivers\CMSIS_6\CMSIS\Core\Include;..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Include;..\..\..\Drivers\CMSIS-DSP\Include;..\..\..\Drivers\CMSIS-DSP\PrivateInclude;..\..\..\Drivers\CMSIS-RTX\Include;..\..\..\Drivers\CMSIS-Device\ST\STM32F4xx\Include;..\..\..\Drivers\CMSIS-View\EventRecorder\Include;..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\..\Utilities</IncludePath>
+              <IncludePath>..\..\App;..\..\Core;..\..\Core\CMSIS-RTX;..\..\Core\CMSIS-View;..\..\Core\Device\STM32F429ZITx;..\..\..\Drivers\BSP;..\..\..\Drivers\CMSIS_6\CMSIS\Core\Include;..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Include;..\..\..\Drivers\CMSIS-DSP\Include;..\..\..\Drivers\CMSIS-DSP\PrivateInclude;..\..\..\Drivers\CMSIS-RTX\Include;..\..\..\Drivers\CMSIS-Device\ST\STM32F4xx\Include;..\..\..\Drivers\CMSIS-View\EventRecorder\Include;..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\..\Utilities</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -358,11 +358,11 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\App;..\..\Core\Inc;..\..\..\Drivers\CMSIS-RTX\Include</IncludePath>
+              <IncludePath>..\..\App;..\..\Core;..\..\Core\CMSIS-RTX;..\..\..\Drivers\CMSIS-RTX\Include</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -371,7 +371,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>..\..\Core\Device\STM32F429ZITx\stm32f429xx.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -382,72 +382,12 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Application/MDK-ARM</GroupName>
-          <Files>
-            <File>
-              <FileName>startup_stm32f429xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\startup_stm32f429xx.s</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Application/User/Core</GroupName>
-          <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Core\Src\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_timebase_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Core\Src\stm32f4xx_hal_timebase_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Core\Src\stm32f4xx_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>RTE_Components.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Core\Inc\RTE_Components.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Application/User/App</GroupName>
-          <Files>
-            <File>
-              <FileName>RTX_Config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\App\RTX_Config.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Drivers/BSP</GroupName>
           <Files>
             <File>
               <FileName>bsp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\BSP\bsp.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/CMSIS</GroupName>
-          <Files>
-            <File>
-              <FileName>os_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Source\os_systick.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Core\Src\system_stm32f4xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -674,6 +614,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\CMSIS-RTX\Source\rtx_timer.c</FilePath>
             </File>
+            <File>
+              <FileName>os_systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Source\os_systick.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -683,11 +628,6 @@
               <FileName>EventRecorder.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\CMSIS-View\EventRecorder\Source\EventRecorder.c</FilePath>
-            </File>
-            <File>
-              <FileName>EventRecorderConf.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Core\Inc\EventRecorderConf.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1147,6 +1087,54 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>User/App</GroupName>
+        </Group>
+        <Group>
+          <GroupName>User/Core</GroupName>
+          <Files>
+            <File>
+              <FileName>startup_stm32f429xx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\..\Core\Device\STM32F429ZITx\arm\startup_stm32f429xx.s</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_timebase_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Core\Device\STM32F429ZITx\stm32f4xx_hal_timebase_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Core\Device\STM32F429ZITx\stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Core\Device\STM32F429ZITx\system_stm32f4xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Core\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>RTE_Components.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Core\RTE_Components.h</FilePath>
+            </File>
+            <File>
+              <FileName>RTX_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Core\CMSIS-RTX\RTX_Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>EventRecorderConf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Core\CMSIS-View\EventRecorderConf.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Utilities</GroupName>
         </Group>
       </Groups>
@@ -1198,7 +1186,7 @@
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
-          <DebugInformation>1</DebugInformation>
+          <DebugInformation>0</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
@@ -1459,7 +1447,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>3</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -1485,7 +1473,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\App;..\..\Core\Inc;..\..\..\Drivers\BSP;..\..\..\Drivers\CMSIS_6\CMSIS\Core\Include;..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Include;..\..\..\Drivers\CMSIS-DSP\Include;..\..\..\Drivers\CMSIS-DSP\PrivateInclude;..\..\..\Drivers\CMSIS-RTX\Include;..\..\..\Drivers\CMSIS-Device\ST\STM32F4xx\Include;..\..\..\Drivers\CMSIS-View\EventRecorder\Include;..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\..\Utilities</IncludePath>
+              <IncludePath>..\..\App;..\..\Core;..\..\Core\CMSIS-RTX;..\..\Core\CMSIS-View;..\..\Core\Device\STM32F429ZITx;..\..\..\Drivers\BSP;..\..\..\Drivers\CMSIS_6\CMSIS\Core\Include;..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Include;..\..\..\Drivers\CMSIS-DSP\Include;..\..\..\Drivers\CMSIS-DSP\PrivateInclude;..\..\..\Drivers\CMSIS-RTX\Include;..\..\..\Drivers\CMSIS-Device\ST\STM32F4xx\Include;..\..\..\Drivers\CMSIS-View\EventRecorder\Include;..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\..\Utilities</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1503,11 +1491,11 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\App;..\..\Core\Inc;..\..\..\Drivers\CMSIS-RTX\Include</IncludePath>
+              <IncludePath>..\..\App;..\..\Core;..\..\Core\CMSIS-RTX;..\..\..\Drivers\CMSIS-RTX\Include</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -1516,7 +1504,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>..\..\Core\Device\STM32F429ZITx\stm32f429xx.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -1527,72 +1515,12 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Application/MDK-ARM</GroupName>
-          <Files>
-            <File>
-              <FileName>startup_stm32f429xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\startup_stm32f429xx.s</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Application/User/Core</GroupName>
-          <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Core\Src\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_timebase_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Core\Src\stm32f4xx_hal_timebase_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Core\Src\stm32f4xx_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>RTE_Components.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Core\Inc\RTE_Components.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Application/User/App</GroupName>
-          <Files>
-            <File>
-              <FileName>RTX_Config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\App\RTX_Config.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Drivers/BSP</GroupName>
           <Files>
             <File>
               <FileName>bsp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\BSP\bsp.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/CMSIS</GroupName>
-          <Files>
-            <File>
-              <FileName>os_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Source\os_systick.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Core\Src\system_stm32f4xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1819,6 +1747,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\CMSIS-RTX\Source\rtx_timer.c</FilePath>
             </File>
+            <File>
+              <FileName>os_systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Source\os_systick.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1897,11 +1830,6 @@
               <FileName>EventRecorder.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\CMSIS-View\EventRecorder\Source\EventRecorder.c</FilePath>
-            </File>
-            <File>
-              <FileName>EventRecorderConf.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Core\Inc\EventRecorderConf.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -2357,6 +2285,54 @@
               <FileName>stm32f4xx_ll_utils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_utils.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>User/App</GroupName>
+        </Group>
+        <Group>
+          <GroupName>User/Core</GroupName>
+          <Files>
+            <File>
+              <FileName>startup_stm32f429xx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\..\Core\Device\STM32F429ZITx\arm\startup_stm32f429xx.s</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_timebase_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Core\Device\STM32F429ZITx\stm32f4xx_hal_timebase_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Core\Device\STM32F429ZITx\stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Core\Device\STM32F429ZITx\system_stm32f4xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Core\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>RTE_Components.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Core\RTE_Components.h</FilePath>
+            </File>
+            <File>
+              <FileName>RTX_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Core\CMSIS-RTX\RTX_Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>EventRecorderConf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Core\CMSIS-View\EventRecorderConf.h</FilePath>
             </File>
           </Files>
         </Group>
