@@ -1,0 +1,12 @@
+layer:  
+  description: CMSIS-View
+  type: CMSIS-View
+
+  add-path:
+    - ../../../Drivers/CMSIS-View/EventRecorder/Include
+
+  groups:
+    - group: CMSIS-View
+      for-context: .Debug
+      files:
+        - file: ../../../Drivers/CMSIS-View/EventRecorder/Source/EventRecorder.c

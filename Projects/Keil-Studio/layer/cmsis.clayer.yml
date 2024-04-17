@@ -1,0 +1,12 @@
+layer:  
+  description: CMSIS
+  type: CMSIS
+
+  add-path:
+    - ../../../Drivers/CMSIS_6/CMSIS/Core/Include
+    - ../../../Drivers/CMSIS_6/CMSIS/RTOS2/Include
+
+  groups:
+    - group: CMSIS
+      files:
+        - file: ../../../Drivers/CMSIS_6/CMSIS/RTOS2/Source/os_systick.c

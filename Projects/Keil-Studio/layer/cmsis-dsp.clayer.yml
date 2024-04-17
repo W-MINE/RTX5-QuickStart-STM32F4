@@ -1,0 +1,40 @@
+layer:  
+  description: CMSIS-DSP
+  type: DSP
+
+  add-path:
+    - ../../../Drivers/CMSIS-DSP/Include 
+    - ../../../Drivers/CMSIS-DSP/PrivateInclude
+
+  groups:
+    - group: CMSIS-DSP
+      files:
+        - file: ../../../Drivers/CMSIS-DSP/Source/BasicMathFunctions/BasicMathFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/DistanceFunctions/DistanceFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/DistanceFunctions/DistanceFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/MatrixFunctions/MatrixFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/MatrixFunctions/MatrixFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/BayesFunctions/BayesFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/BayesFunctions/BayesFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/FastMathFunctions/FastMathFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/FastMathFunctions/FastMathFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/StatisticsFunctions/StatisticsFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/CommonTables/CommonTables.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/FilteringFunctions/FilteringFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/FilteringFunctions/FilteringFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/SupportFunctions/SupportFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/SupportFunctions/SupportFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/SVMFunctions/SVMFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/SVMFunctions/SVMFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/InterpolationFunctions/InterpolationFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/ControllerFunctions/ControllerFunctions.c
+        - file: ../../../Drivers/CMSIS-DSP/Source/WindowFunctions/WindowFunctions.c

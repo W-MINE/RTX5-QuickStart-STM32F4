@@ -1,0 +1,26 @@
+solution:
+  cdefault:
+
+  target-types:
+    - type: STM32F429ZITx
+      define:
+        - USE_HAL_DRIVER
+        - STM32F429xx
+      device: STMicroelectronics::STM32F429ZITx
+      processor:
+        fpu: sp
+
+  build-types:
+    - type: Debug
+      optimize: none
+      debug: on
+      define:
+        - Enable_EventRecorder
+        - OS_EVR_INIT: 1
+
+    - type: Release
+      optimize: balanced
+      debug: off
+
+  projects:
+    - project: ./edition-standard/standard_edition.cproject.yml

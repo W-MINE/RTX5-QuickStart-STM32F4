@@ -1,0 +1,3 @@
+cbuild-pack:
+  resolved-packs:
+    - resolved-pack: Keil::STM32F4xx_DFP@2.17.1

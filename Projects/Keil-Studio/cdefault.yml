@@ -1,0 +1,41 @@
+default:
+  compiler: AC6
+  misc:
+    - C:
+        - -std=gnu11
+      C-CPP:
+        - -fno-rtti
+        - -funsigned-char
+        - -fshort-enums
+        - -fshort-wchar
+        - -ffunction-sections
+        - -Wno-packed
+        - -Wno-missing-variable-declarations
+        - -Wno-missing-prototypes
+        - -Wno-missing-noreturn
+        - -Wno-sign-conversion
+        - -Wno-nonportable-include-path
+        - -Wno-reserved-id-macro
+        - -Wno-unused-macros
+        - -Wno-documentation-unknown-command
+        - -Wno-documentation
+        - -Wno-license-management
+        - -Wno-parentheses-equality
+      CPP:
+        - -xc++
+        - -std=gnu++17
+      ASM:
+        - -masm=auto
+      Link:
+        - --map
+        - --load_addr_map_info
+        - --xref
+        - --callgraph
+        - --symbols
+        - --info sizes
+        - --info totals
+        - --info unused
+        - --info veneers
+        - --strict
+        - --summary_stderr
+        - --info summarysizes

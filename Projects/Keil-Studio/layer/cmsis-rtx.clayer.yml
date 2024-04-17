@@ -1,0 +1,25 @@
+layer:  
+  description: CMSIS-RTX
+  type: CMSIS-RTX
+
+  add-path:
+    - ../../../Drivers/CMSIS-RTX/Include
+
+  groups:
+    - group: CMSIS-RTX
+      files:
+        - file: ../../../Drivers/CMSIS-RTX/Source/GCC/irq_armv7m.S
+          for-context: +STM32F429ZITx
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_delay.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_evflags.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_evr.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_kernel.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_lib.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_memory.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_mempool.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_msgqueue.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_mutex.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_semaphore.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_system.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_thread.c
+        - file: ../../../Drivers/CMSIS-RTX/Source/rtx_timer.c

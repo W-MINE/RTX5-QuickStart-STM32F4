@@ -1,0 +1,22 @@
+project:
+  setups:
+    - setup: Release Output
+      for-context: .Release
+      output:
+        type:
+        - hex
+        - bin
+
+  linker:
+    - script: ../../Core/Device/STM32F429ZITx/stm32f429xx.sct
+      for-context: +STM32F429ZITx
+
+  layers:
+    - layer: ../layer/application.clayer.yml
+    - layer: ../layer/cmsis.clayer.yml
+    - layer: ../layer/cmsis-dsp.clayer.yml
+    - layer: ../layer/cmsis-rtx.clayer.yml
+    - layer: ../layer/cmsis-view.clayer.yml
+      for-context: .Debug
+    - layer: ../layer/stm32f4xx/stm32f4xx_hal_driver.clayer.yml
+      for-context: +STM32F429ZITx

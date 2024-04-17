@@ -1,0 +1,34 @@
+layer:  
+  description: User
+  type: User
+
+  add-path:
+    - ../../App
+    - ../../Core
+    - ../../Core/CMSIS-RTX
+    - ../../Core/CMSIS-View
+    - ../../Core/Device/STM32F429ZITx
+    - ../../../Drivers/BSP
+    - ../../../Utilities
+
+  groups:
+    - group: Core
+      files:
+        - file: ../../Core/Device/STM32F429ZITx/arm/startup_stm32f429xx.s
+          for-context: +STM32F429ZITx
+        - file: ../../Core/Device/STM32F429ZITx/stm32f4xx_hal_timebase_tim.c
+          for-context: +STM32F429ZITx
+        - file: ../../Core/Device/STM32F429ZITx/stm32f4xx_it.c
+          for-context: +STM32F429ZITx
+        - file: ../../Core/Device/STM32F429ZITx/system_stm32f4xx.c
+          for-context: +STM32F429ZITx
+        - file: ../../Core/main.c
+        - file: ../../Core/RTE_Components.h
+        - file: ../../Core/CMSIS-RTX/RTX_Config.h
+        - file: ../../Core/CMSIS-View/EventRecorderConf.h
+          for-context: .Debug
+    - group: Application
+    - group: BSP
+      files:
+        - file: ../../../Drivers/BSP/bsp.c
+    - group: Utilities
