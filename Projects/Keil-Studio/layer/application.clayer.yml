@@ -16,6 +16,10 @@ layer:
       files:
         - file: ../../Core/Device/STM32F429ZITx/arm/startup_stm32f429xx.s
           for-context: +STM32F429ZITx
+          misc:
+            - for-compiler: AC6
+              ASM:
+                - -Wa,armasm,--diag_suppress=A1950W
         - file: ../../Core/Device/STM32F429ZITx/stm32f4xx_hal_timebase_tim.c
           for-context: +STM32F429ZITx
         - file: ../../Core/Device/STM32F429ZITx/stm32f4xx_it.c
