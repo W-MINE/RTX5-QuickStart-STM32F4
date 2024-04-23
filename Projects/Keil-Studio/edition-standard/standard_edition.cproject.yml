@@ -4,8 +4,22 @@ project:
       for-context: .Release
       output:
         type:
-        - hex
-        - bin
+          - hex
+          - bin
+
+  packs:
+    - pack: ARM::CMSIS
+      path: ../../../Drivers/CMSIS_6
+    - pack: ARM::CMSIS-DSP
+      path: ../../../Drivers/CMSIS-DSP
+    # - pack: ARM::CMSIS-RTX
+    #   path: ../../../Drivers/CMSIS-RTX
+    - pack: ARM::CMSIS-View
+      path: ../../../Drivers/CMSIS-View
+    - pack: Keil::STM32F4xx_DFP@2.17.1
+      for-context:
+        - +STM32F405ZGTx
+        - +STM32F429ZITx
 
   linker:
     - script: ../../Core/Device/STM32F405ZGTx/stm32f405xx.sct
@@ -13,13 +27,21 @@ project:
     - script: ../../Core/Device/STM32F429ZITx/stm32f429xx.sct
       for-context: +STM32F429ZITx
 
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: ARM::CMSIS:OS Tick:SysTick
+    - component: ARM::CMSIS:DSP&Source
+    # - component: ARM::CMSIS:RTOS2:Keil RTX5&Source
+    - component: ARM::CMSIS-View:Event Recorder&DAP
+      for-context: .Debug
+
   layers:
     - layer: ../layer/application.clayer.yml
-    - layer: ../layer/cmsis.clayer.yml
-    - layer: ../layer/cmsis-dsp.clayer.yml
+    # - layer: ../layer/cmsis.clayer.yml
+    # - layer: ../layer/cmsis-dsp.clayer.yml
     - layer: ../layer/cmsis-rtx.clayer.yml
-    - layer: ../layer/cmsis-view.clayer.yml
-      for-context: .Debug
+    # - layer: ../layer/cmsis-view.clayer.yml
+    #   for-context: .Debug
     - layer: ../layer/stm32f4xx/stm32f4xx_hal_driver.clayer.yml
       for-context:
         - +STM32F405ZGTx

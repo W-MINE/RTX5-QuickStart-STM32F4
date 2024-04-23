@@ -545,6 +545,11 @@
           <GroupName>Drivers/CMSIS-RTX</GroupName>
           <Files>
             <File>
+              <FileName>os_systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Source\os_systick.c</FilePath>
+            </File>
+            <File>
               <FileName>irq_armv7m.S</FileName>
               <FileType>2</FileType>
               <FilePath>..\..\..\Drivers\CMSIS-RTX\Source\GCC\irq_armv7m.S</FilePath>
@@ -613,11 +618,6 @@
               <FileName>rtx_timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\CMSIS-RTX\Source\rtx_timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Source\os_systick.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1678,6 +1678,11 @@
           <GroupName>Drivers/CMSIS-RTX</GroupName>
           <Files>
             <File>
+              <FileName>os_systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Source\os_systick.c</FilePath>
+            </File>
+            <File>
               <FileName>irq_armv7m.S</FileName>
               <FileType>2</FileType>
               <FilePath>..\..\..\Drivers\CMSIS-RTX\Source\GCC\irq_armv7m.S</FilePath>
@@ -1746,11 +1751,6 @@
               <FileName>rtx_timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\CMSIS-RTX\Source\rtx_timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\Drivers\CMSIS_6\CMSIS\RTOS2\Source\os_systick.c</FilePath>
             </File>
           </Files>
         </Group>
