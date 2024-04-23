@@ -25,6 +25,10 @@ extern "C" {
 #include "EventRecorder.h"
 #endif
 
+#ifdef STM32F405xx
+#include "stm32f405xx.h"
+#include "stm32f4xx_hal.h"
+#endif
 #ifdef STM32F429xx
 #include "stm32f429xx.h"
 #include "stm32f4xx_hal.h"

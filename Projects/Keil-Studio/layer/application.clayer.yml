@@ -7,6 +7,7 @@ layer:
     - ../../Core
     - ../../Core/CMSIS-RTX
     - ../../Core/CMSIS-View
+    - ../../Core/Device/STM32F405ZGTx
     - ../../Core/Device/STM32F429ZITx
     - ../../../Drivers/BSP
     - ../../../Utilities
@@ -14,6 +15,12 @@ layer:
   groups:
     - group: Core
       files:
+        - file: ../../Core/Device/STM32F405ZGTx/arm/startup_stm32f405xx.s
+          for-context: +STM32F405ZGTx
+          misc:
+            - for-compiler: AC6
+              ASM:
+                - -Wa,armasm,--diag_suppress=A1950W
         - file: ../../Core/Device/STM32F429ZITx/arm/startup_stm32f429xx.s
           for-context: +STM32F429ZITx
           misc:
@@ -21,11 +28,17 @@ layer:
               ASM:
                 - -Wa,armasm,--diag_suppress=A1950W
         - file: ../../Core/Device/STM32F429ZITx/stm32f4xx_hal_timebase_tim.c
-          for-context: +STM32F429ZITx
+          for-context:
+            - +STM32F405ZGTx
+            - +STM32F429ZITx
         - file: ../../Core/Device/STM32F429ZITx/stm32f4xx_it.c
-          for-context: +STM32F429ZITx
+          for-context:
+            - +STM32F405ZGTx
+            - +STM32F429ZITx
         - file: ../../Core/Device/STM32F429ZITx/system_stm32f4xx.c
-          for-context: +STM32F429ZITx
+          for-context:
+            - +STM32F405ZGTx
+            - +STM32F429ZITx
         - file: ../../Core/main.c
         - file: ../../Core/RTE_Components.h
         - file: ../../Core/CMSIS-RTX/RTX_Config.h

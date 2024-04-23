@@ -8,6 +8,8 @@ project:
         - bin
 
   linker:
+    - script: ../../Core/Device/STM32F405ZGTx/stm32f405xx.sct
+      for-context: +STM32F405ZGTx
     - script: ../../Core/Device/STM32F429ZITx/stm32f429xx.sct
       for-context: +STM32F429ZITx
 
@@ -19,4 +21,6 @@ project:
     - layer: ../layer/cmsis-view.clayer.yml
       for-context: .Debug
     - layer: ../layer/stm32f4xx/stm32f4xx_hal_driver.clayer.yml
-      for-context: +STM32F429ZITx
+      for-context:
+        - +STM32F405ZGTx
+        - +STM32F429ZITx

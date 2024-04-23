@@ -2,10 +2,11 @@ solution:
   cdefault:
 
   target-types:
+    - type: STM32F405ZGTx
+      device: STMicroelectronics::STM32F405ZGTx
+      processor:
+        fpu: sp
     - type: STM32F429ZITx
-      define:
-        - USE_HAL_DRIVER
-        - STM32F429xx
       device: STMicroelectronics::STM32F429ZITx
       processor:
         fpu: sp

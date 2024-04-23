@@ -4,6 +4,9 @@
 /*
  * Define the Device Header File: 
  */
+#ifdef STM32F405xx
+#define CMSIS_device_header "stm32f405xx.h"
+#endif
 #ifdef STM32F429xx
 #define CMSIS_device_header "stm32f429xx.h"
 #endif
