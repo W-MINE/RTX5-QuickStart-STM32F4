@@ -44,8 +44,8 @@ layer:
         - file: ../../Core/CMSIS-RTX/RTX_Config.h
         - file: ../../Core/CMSIS-View/EventRecorderConf.h
           for-context: .Debug
-    - group: Application
+    #- group: Application
     - group: BSP
       files:
         - file: ../../../Drivers/BSP/bsp.c
-    - group: Utilities
+    #- group: Utilities

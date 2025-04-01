@@ -5,6 +5,9 @@ layer:
   add-path:
     - ../../../Drivers/CMSIS-RTX/Include
 
+  add-path-asm:
+    - ../../../Drivers/CMSIS-RTX/Include
+
   groups:
     - group: CMSIS-RTX
       files:

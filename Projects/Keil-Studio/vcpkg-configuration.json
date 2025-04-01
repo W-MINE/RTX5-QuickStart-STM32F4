@@ -1,25 +1,15 @@
 {
-	"default-registry": {
-		"kind": "git",
-		"baseline": "032d9d0820db290ce9ff644dabfdf564343013ae",
-		"repository": "https://github.com/microsoft/vcpkg"
-	},
 	"registries": [
 		{
 			"name": "arm",
 			"kind": "artifact",
 			"location": "https://artifacts.tools.arm.com/vcpkg-registry"
-		},
-		{
-			"name": "microsoft",
-			"kind": "artifact",
-			"location": "https://aka.ms/vcpkg-ce-default"
 		}
 	],
 	"requires": {
-		"arm:tools/open-cmsis-pack/cmsis-toolbox": "2.3.0",
-		"microsoft:tools/kitware/cmake": "3.25.2",
-		"microsoft:tools/ninja-build/ninja": "1.10.2",
-		"arm:compilers/arm/armclang": "6.21.0"
+		"arm:tools/open-cmsis-pack/cmsis-toolbox": "2.8.0",
+		"arm:tools/kitware/cmake": "3.31.5",
+		"arm:tools/ninja-build/ninja": "1.12.0",
+		"arm:compilers/arm/armclang": "6.23.0"
 	}
 }

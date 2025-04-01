@@ -1,6 +1,6 @@
 solution:
   cdefault:
-
+  compiler: AC6
   target-types:
     - type: STM32F405ZGTx
       device: STMicroelectronics::STM32F405ZGTx

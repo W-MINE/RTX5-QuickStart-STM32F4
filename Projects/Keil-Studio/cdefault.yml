@@ -1,7 +1,8 @@
 default:
-  compiler: AC6
+
   misc:
-    - C:
+    - for-compiler: AC6
+      C:
         - -std=gnu11
       C-CPP:
         - -fno-rtti
